@@ -1,0 +1,137 @@
+<!--Login || Register Page-->
+<?php 
+session_start(); 
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="images/logo.gif">
+	
+	<!--Logo icon-->
+	<title>Seller Login | SmartRet </title>
+    
+	<!--Stylesheet for Login page-->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    
+
+	<!--Scripts-->
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="lib/angular.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="lib/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for navbar -->
+    <link href="css/navbar-fixed-top.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="lib/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!--Includes for Search-->
+    <script src="js/typeahead.min.js"></script>
+    <link rel="stylesheet" href="css/search.css">
+
+    <!--Includes for footer-->
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/font-awesome/cookie.css">
+    
+    <!--Navbar color and shadow CSS-->
+    <link rel="stylesheet" type="text/css" href="css/navbarcolor.css">
+
+    <!--Includes for Customized popup message-->
+    <link href='popup/font.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="popup/buttons.css"/>
+    <script src="popup/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="popup/jquery.noty.packaged.js"></script>
+    
+
+  </head>
+
+  <body style="background-image:url('images/Background1.jpg'); background-repeat:no-repeat;">
+
+   <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top" id="header">
+        <div class="container">
+            <div class="navbar-header" >
+                <img src="images/logo.gif " class="navbar-brand" style="height:50px; padding:0%;">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>&nbsp;&nbsp;
+                <h3 style=" font: bold 16px sans-serif; display: inline-block; color:  #ffffff; font: normal 36px 'Cookie', cursive; margin: 0;">
+                Smart<span style="color: #5383d3;">Ret</span><!--Span for blue color of Ret-->
+                </h3>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.php">Home</a></li>
+                    <li class="about"><a href="index.php#about">About</a></li>
+                    <li class="contact"><a href="index.php#contact">Contact</a></li>
+                    <li  class="active"><a href="login.php">Seller Login</a>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+       </div><!--/.container-->
+   </nav><!--End navbar-->
+
+
+<!--Login and Registeration forms-->
+<div class="container">
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							
+							<div class="col-xs-12">
+								<a href="#" class="active" id="login-form-link">Forgot Password</a>
+							</div>
+						</div>
+
+						<hr>
+
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="login-form" action="php/forgot.php" method="post" role="form" style="display: block;">
+									
+									<div class="form-group">
+										<input type="email" name="email" class="form-control" placeholder="Email" ng-model="email" required>
+									</div>
+																		
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Mail Password">
+											</div>
+										</div>
+									</div>
+																
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
